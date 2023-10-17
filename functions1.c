@@ -2,7 +2,7 @@
 
 /************************* PRINT UNSIGNED NUMBER *************************/
 /**
- * prpint_unsigned - Prints an unsigned number
+ * toprint_unsigned - Prints an unsigned number
  * @types: List of arguments in a function
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -11,7 +11,7 @@
  * @size: Size specifier
  * Return: Number of characters printed.
  */
-int pint_unsigned(va_list types, char buffer[],
+int toprint_unsigned(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i = BUFF_SIZE - 2;
