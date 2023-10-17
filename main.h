@@ -56,24 +56,24 @@ int print_int(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 int print_binary(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-int print_unsigned(va_list types, char buffer[],
+int toprint_unsigned(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-int print_octal(va_list types, char buffer[],
+int print_octals(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-int print_hexadecimal(va_list types, char buffer[],
+int print_hexadecimals(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-int print_hexa_upper(va_list types, char buffer[],
+int print_hexa_isupper(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
-int print_hexa(va_list types, char map_to[],
+int toprint_hexa(va_list types, char map_to[],
 char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
 /* Function to print non printable characters */
-int print_non_printable(va_list types, char buffer[],
+int toprint_non_printable(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 /* Funcion to print memory address */
-int print_pointer(va_list types, char buffer[],
+int print_pointers(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
 
 /* Funciotns to handle other specifiers */
@@ -105,7 +105,7 @@ char buffer[],
 	int flags, int width, int precision, int size);
 
 /****************** UTILS ******************/
-int is_printable(char);
+int tis_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
 long int convert_size_number(long int num, int size);
