@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * get_width - Function that calculates the width for printing
+ * get_wid - Function that calculates the width for printing
  * @format: Formatted string
  * @i: input
  * @list: list of arguments.
  * Return: width
  */
 
-int get_width(const char *format, int *i, va_list list)
+int get_wid(const char *format, int *i, va_list arg)
 {
 	int curr_i;
 	int width = 0;
@@ -23,7 +23,7 @@ int get_width(const char *format, int *i, va_list list)
 		else if (format[curr_i] == '*')
 		{
 			curr_i++;
-			width = va_arg(list, int);
+			width = va_arg(arg, int);
 			break;
 		}
 		else
